@@ -1,10 +1,12 @@
 package com.example.jhonatan.leo;
 
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -20,6 +22,8 @@ public class Main2Activity extends AppCompatActivity {
     Spinner spinner4;
     Spinner spinner5;
     Spinner spinner6;
+
+    RadioGroup radioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -199,8 +203,20 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+        radioGroup = (RadioGroup)findViewById(R.id.grupo);
+
 // ON
 
+    }
+
+    public void ir ()
+    {
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
+
+            }
+        });
     }
 
 }
