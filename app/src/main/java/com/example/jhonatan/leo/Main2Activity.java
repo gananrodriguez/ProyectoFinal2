@@ -1,11 +1,13 @@
 package com.example.jhonatan.leo;
 
+import android.content.Intent;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -13,7 +15,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity implements View.OnClickListener {
 
     Spinner spinner1;
     Spinner spinner2;
@@ -23,7 +25,10 @@ public class Main2Activity extends AppCompatActivity {
     Spinner spinner5;
     Spinner spinner6;
 
-    RadioGroup radioGroup;
+
+    Button plMoodle;
+    Button plQdiez;
+    Button Correo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -203,20 +208,50 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
-        radioGroup = (RadioGroup)findViewById(R.id.grupo);
+
+        plMoodle = (Button) findViewById(R.id.button2);
+        plMoodle.setOnClickListener(this);
+
+        plQdiez = (Button) findViewById( R.id.button3);
+        plQdiez.setOnClickListener(this);
+
+
+        Correo= (Button) findViewById( R.id.button4);
 
 // ON
 
     }
 
-    public void ir ()
-    {
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
 
-            }
-        });
+
+
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId())
+        {
+            case R.id.button2:
+                Intent uno = new Intent(this, Moodle.class);
+                startActivity(uno);
+
+            case R.id.button3:
+
+                Intent dos = new Intent(this, Diez.class);
+                startActivity(dos);
+
+            case R.id.button4:
+                Intent tres = new Intent(this,Correo.class);
+                startActivity(tres);
+
+
+        }
+
     }
 
-}
+
+
+
+
+
+
+    }
