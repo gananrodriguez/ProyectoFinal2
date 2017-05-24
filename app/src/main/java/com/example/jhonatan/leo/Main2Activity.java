@@ -217,6 +217,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
 
         Correo= (Button) findViewById( R.id.button4);
+        Correo.setOnClickListener(this);
 
 // ON
 
