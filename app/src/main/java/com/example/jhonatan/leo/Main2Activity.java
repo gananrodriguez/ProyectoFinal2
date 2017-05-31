@@ -48,8 +48,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Main2Activity.this,"" + String.valueOf(spinner1.getSelectedItem()),Toast.LENGTH_SHORT).show();
-                return;
+
             }
 
             @Override
@@ -81,8 +80,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Main2Activity.this,"" + String.valueOf(spinner2.getSelectedItem()),Toast.LENGTH_SHORT).show();
-                return;
+
             }
 
             @Override
