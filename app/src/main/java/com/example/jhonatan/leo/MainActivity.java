@@ -29,13 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ingresar.setOnClickListener(this);
 
-        rec.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Toast.makeText(getApplicationContext(),"recordado",Toast.LENGTH_SHORT).show();
-                return;
-            }
-        });
+        rec = (RadioButton)findViewById(R.id.radioButton);
+        mostrar();
     }
 
 
@@ -56,6 +51,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(getApplicationContext(),"incorrecto",Toast.LENGTH_LONG).show();
             return;
         }
+    }
+
+    public  void mostrar () {
+
+        rec.setOnCheckedChangeListener(new RadioButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked)
+                {
+                    Toast.makeText(getApplicationContext(),"recordado",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+            }
+        });
     }
 
 
