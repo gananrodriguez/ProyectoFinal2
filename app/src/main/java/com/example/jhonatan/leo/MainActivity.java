@@ -5,10 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    ToggleButton ingresar;
+    RadioButton  rec;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +23,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        Button ingresar;
 
 
-
-        ingresar = (Button) findViewById(R.id.button);
+        ingresar = (ToggleButton) findViewById(R.id.button);
 
         ingresar.setOnClickListener(this);
+
+        rec.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                Toast.makeText(getApplicationContext(),"recordado",Toast.LENGTH_SHORT).show();
+                return;
+            }
+        });
     }
 
 
@@ -45,5 +57,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
     }
+
 
 }
