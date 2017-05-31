@@ -28,7 +28,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
     Button plMoodle;
     Button plQdiez;
-    Button Correo;
+    Button Correos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -210,14 +210,37 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
 
         plMoodle = (Button) findViewById(R.id.button2);
-        plMoodle.setOnClickListener(this);
+        plMoodle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent moo =new Intent(Main2Activity.this,Moodle.class);
+                startActivity(moo);
+            }
+        });
+
 
         plQdiez = (Button) findViewById( R.id.button3);
-        plQdiez.setOnClickListener(this);
+        plQdiez.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent die = new Intent(Main2Activity.this,Diez.class);
+                startActivity(die);
+            }
+        });
 
 
-        Correo= (Button) findViewById( R.id.button4);
-        Correo.setOnClickListener(this);
+
+        Correos= (Button) findViewById( R.id.button4);
+        Correos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent corr =new Intent(Main2Activity.this,Correo.class);
+                startActivity(corr);
+            }
+        });
+
+
 
 // ON
 

@@ -6,15 +6,15 @@ import android.webkit.WebView;
 
 public class Diez extends AppCompatActivity {
 
-    WebView webView;
+    WebView webView2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diez);
 
-        webView = (WebView) findViewById(R.id.diez);
+        webView2 = (WebView) findViewById(R.id.diez);
 
-        webView.loadUrl("https://www.q10academico.com/");
+        webView2.loadUrl("https://www.q10academico.com/");
 
 
     }

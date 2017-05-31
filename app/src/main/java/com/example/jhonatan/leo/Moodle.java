@@ -6,14 +6,14 @@ import android.webkit.WebView;
 
 public class Moodle extends AppCompatActivity {
 
-    WebView webView;
+    WebView webView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_moodle);
 
-        webView =(WebView) findViewById(R.id.mood);
-        webView.loadUrl("http://virtual.uniremingtonmanizales.edu.co/moodle/my/");
+        webView1 =(WebView) findViewById(R.id.mood);
+        webView1.loadUrl("http://virtual.uniremingtonmanizales.edu.co/moodle/my/");
     }
 }

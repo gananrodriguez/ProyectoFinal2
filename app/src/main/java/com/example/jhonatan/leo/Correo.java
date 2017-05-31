@@ -6,14 +6,14 @@ import android.webkit.WebView;
 
 public class Correo extends AppCompatActivity {
 
-    WebView webView;
+    WebView webView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_correo);
 
-        webView = (WebView) findViewById(R.id.cor);
-        webView.loadUrl("https://mail.google.com/mail/u/0/#inbox");
+        webView3 = (WebView) findViewById(R.id.cor);
+        webView3.loadUrl("https://mail.google.com/mail/u/0/#inbox");
     }
 }
