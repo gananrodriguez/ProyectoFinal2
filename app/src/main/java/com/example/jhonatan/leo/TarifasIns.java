@@ -12,7 +12,7 @@ public class TarifasIns extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarifas_ins);
 
-        wTarifas =(WebView)findViewById(R.id.tarifass);
+        wTarifas =(WebView)findViewById(R.id.tarifas);
         wTarifas.loadUrl("http://www.uniremington.edu.co/manizales/784-tarifas-institucionales-2017.html");
 
 

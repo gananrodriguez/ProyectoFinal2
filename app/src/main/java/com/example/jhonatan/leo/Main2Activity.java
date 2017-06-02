@@ -153,6 +153,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                          Intent calen = new Intent(Main2Activity.this,CalendarioAca.class);
                          startActivity(calen);
 
+                         break;
+
+
                      case 2:
                          Intent tar = new Intent(Main2Activity.this,TarifasIns.class);
                          startActivity(tar);
