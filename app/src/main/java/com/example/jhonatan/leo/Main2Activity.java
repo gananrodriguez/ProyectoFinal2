@@ -17,6 +17,7 @@ import java.util.List;
 
 public class Main2Activity extends AppCompatActivity implements View.OnClickListener {
 
+    //declaro variables
     Spinner spinner1;
     Spinner spinner2;
     Spinner spinner3;
@@ -35,19 +36,32 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        //linkeo el spinner que me contine la informacion de la cat
+
         spinner1 = (Spinner) findViewById(R.id.spinner);
+
+        //cracion del arraylist  que  me contiene la informacion
+
         List spinnerUno = new ArrayList();
 
+        //campos que iran en la lista que despliega el spinner
         spinnerUno.add("CAT MANIZALES");
+
+        //adaptador que me contiene el arraylist
 
         ArrayAdapter uno = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line,spinnerUno);
         uno.setDropDownViewResource(android.R.layout.simple_spinner_item);
+
+        //asignacion del adaptador al spinner
         spinner1.setAdapter(uno);
+
+        //metodos que se crean para cuando este checkeado o no
 
         spinner1.setOnItemSelectedListener (new AdapterView.OnItemSelectedListener() {
 
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
 
             }
 
@@ -59,10 +73,14 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
             }
         });
 
+
+        //linkeo el spinner que me contine la informacion de los aspirantes
         spinner2 = (Spinner)findViewById(R.id.spinner2);
 
+        //cracion del arraylist  que  me contiene la informacion
         List spinnerdos = new ArrayList();
 
+        //campos que iran en la lista que despliega el spinner
         spinnerdos.add ("Aspirantes");
         spinnerdos.add ("oferta academica");
         spinnerdos.add ("formas de pago");
@@ -73,11 +91,17 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         spinnerdos.add ("pre-inscripcion");
         spinnerdos.add ("documentos nuevos");
 
+        //adaptador que me contiene el arraylist
+
+
         ArrayAdapter dos  = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,spinnerdos);
         dos.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        //asignacion del adaptador al spinner
         spinner2.setAdapter(dos);
-        spinner2.setOnItemSelectedListener (new AdapterView.OnItemSelectedListener() {
 
+        //creacion de metodos
+        spinner2.setOnItemSelectedListener (new AdapterView.OnItemSelectedListener() {
+            //metodos que se crean para cuando este checkeado o no
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -90,8 +114,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
             }
         });
-
+        //linkeo el spinner que me contine la informacion de los estudiantes
         spinner3 = (Spinner)findViewById(R.id.spinner3);
+        //array list que cargare en el spinner
         List spinnertres = new ArrayList();
 
         spinnertres.add ("Estudiantes");
@@ -106,17 +131,34 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         spinnertres.add("Lineamientos academicos");
         spinnertres.add("Reglamento estudiantil");
 
+        //creacion del adaptador
+
         ArrayAdapter tres = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, spinnertres);
 
         tres.setDropDownViewResource(android.R.layout.simple_spinner_item);
-
+        //asignacion del adaptador al spinner
         spinner3.setAdapter(tres);
 
 
         spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+            {
+                 switch (i)
+                 {
+                     case 0 :
 
+                         break;
+                     case 1:
+                         Intent calen = new Intent(Main2Activity.this,CalendarioAca.class);
+                         startActivity(calen);
+
+                     case 2:
+                         Intent tar = new Intent(Main2Activity.this,TarifasIns.class);
+                         startActivity(tar);
+                         break;
+
+                 }
             }
 
             @Override
@@ -206,8 +248,10 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-
+//linkeo el boton que me llevara al moodle
         plMoodle = (Button) findViewById(R.id.button2);
+
+        //creacion del metodo que me comunica con la vista que tiene la informacion del moodle
         plMoodle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -217,8 +261,10 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-
+//linkeo el boton que me llevara a la plataforma q10
         plQdiez = (Button) findViewById( R.id.button3);
+
+        //creacion del metodo que me comunica con la vista que tiene la informacion del Q10
         plQdiez.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -228,8 +274,10 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         });
 
 
-
+//linkeo el boton que me llevara al correo
         Correos= (Button) findViewById( R.id.button4);
+
+        //creacion del metodo que me comunica con la vista que tiene la informacion del correo
         Correos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

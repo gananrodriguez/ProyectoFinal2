@@ -21,7 +21,9 @@
         <activity android:name=".Main2Activity" />
         <activity android:name=".Moodle" />
         <activity android:name=".Diez" />
-        <activity android:name=".Correo"></activity>
+        <activity android:name=".Correo" />
+        <activity android:name=".CalendarioAca" />
+        <activity android:name=".TarifasIns"></activity>
     </application>
 
 </manifest>
