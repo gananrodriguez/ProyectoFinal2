@@ -158,6 +158,46 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                          startActivity(tar);
                          break;
 
+                     case 3:
+                         Intent mood = new Intent(Main2Activity.this,PlataformaMo.class);
+                         startActivity(mood);
+                         break;
+                     case 4:
+                         Intent qdie = new Intent(Main2Activity.this,PlataformaQ.class);
+                         startActivity(qdie);
+                         break;
+
+                     case 5:
+                         Intent corinst = new Intent(Main2Activity.this,CorreoInst.class);
+                         startActivity(corinst);
+                         break;
+
+                     case 6:
+                         Intent reci = new Intent(Main2Activity.this,ReciboMatri.class);
+                         startActivity(reci);
+                         break;
+
+                     case 7:
+                         Intent homo = new Intent(Main2Activity.this,Homologaciones.class);
+                         startActivity(homo);
+                         break;
+
+                     case 8:
+                         Intent direc = new Intent(Main2Activity.this,DirectorioAdm.class);
+                         startActivity(direc);
+                         break;
+
+                     case 9:
+                         Intent line = new Intent(Main2Activity.this,LineamientosAca.class);
+                         startActivity(line);
+                         break;
+
+                     case 10:
+                         Intent regl = new Intent(Main2Activity.this,ReglamentoEst.class);
+                         startActivity(regl);
+                         break;
+
+
                  }
             }
 

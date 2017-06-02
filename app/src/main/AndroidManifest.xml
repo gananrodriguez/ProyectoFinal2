@@ -23,7 +23,15 @@
         <activity android:name=".Diez" />
         <activity android:name=".Correo" />
         <activity android:name=".CalendarioAca" />
-        <activity android:name=".TarifasIns"></activity>
+        <activity android:name=".TarifasIns" />
+        <activity android:name=".PlataformaMo" />
+        <activity android:name=".PlataformaQ" />
+        <activity android:name=".CorreoInst" />
+        <activity android:name=".ReciboMatri" />
+        <activity android:name=".Homologaciones" />
+        <activity android:name=".DirectorioAdm" />
+        <activity android:name=".LineamientosAca" />
+        <activity android:name=".ReglamentoEst"></activity>
     </application>
 
 </manifest>
